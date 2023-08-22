@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  server:
+    image: bun-elysia:v1
+    build: .
+    container_name: bun-elysia-c
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
